@@ -69,21 +69,7 @@ def sinkhorn(C, itrs=100, device='cuda:0'):
 
 
 if __name__ == '__main__':
-    # X = torch.Tensor(
-    #     [
-    #         [0, 0, 1],
-    #         [1, 0, 0],
-    #         [0, 1, 0]
-    #     ]
-    # )
-    #
-    # X_hat = torch.Tensor(
-    #     [
-    #         [0.5, 0.3, 0.2],
-    #         [0.1, 0.6, 0.2],
-    #         [0.2, 0.1, 0.6]
-    #     ]
-    # )
+
     X = torch.Tensor(
         [
             [0, 0, 1],

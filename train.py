@@ -21,10 +21,10 @@ torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--expName', type=str, default='exp0930_test')
-parser.add_argument('--dataset', type=str, default='SMSP')
+parser.add_argument('--expName', type=str, default='exp')
+parser.add_argument('--dataset', type=str, default='BP')
 parser.add_argument('--opt', type=str, default='opt')
-parser.add_argument('--epoch', type=int, default=15)
+parser.add_argument('--epoch', type=int, default=100)
 parser.add_argument('--Aug', type=str, default='group')
 parser.add_argument('--sampleTimes', type=int, default=-1)
 args = parser.parse_args()

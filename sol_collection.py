@@ -80,7 +80,7 @@ def collect(filepath,saveRoot,nSol,maxTime):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Process some integers.')
-    parser.add_argument('--rootDir', type=str, default=r'data/BPP/nItem20_s300/train', help='root directory')
+    parser.add_argument('--rootDir', type=str, default=r'data/BPP/nItem20_s500/train', help='root directory')
     parser.add_argument('--nSol', type=int, default=100, help='number of sols')
     parser.add_argument('--maxTime', type=int, default=300, help='max solving time')
     parser.add_argument('--nWorkers', type=int, default=1, help='number of processes')
