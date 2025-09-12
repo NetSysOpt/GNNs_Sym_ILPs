@@ -28,7 +28,7 @@ python gen_smsp.py
 
 ## Solution Collection
 
-The (high-quality) solutions of training instances are collected and stored in `$DATASET_NAME/train/solutions` using MILP solver Gurobi by
+The (high-quality) solutions of training instances are collected and stored in `$DATASET_NAME/train/solutions` using MILP solver SCIP by
 
 
 ```plaintext
