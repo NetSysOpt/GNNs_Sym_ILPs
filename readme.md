@@ -1,6 +1,6 @@
 # When GNNs meet symmetry in ILPs: an orbit-based feature augmentation approach
 
-This repository contains the code for the NeurIPS 2024 paper: **[When GNNs meet symmetry in ILPs: an orbit-based feature augmentation approach](https://arxiv.org/pdf/2501.14211)**.
+This repository contains the code for the ICLR 2025 paper: **[When GNNs meet symmetry in ILPs: an orbit-based feature augmentation approach](https://arxiv.org/pdf/2501.14211)**.
 
 ## Environment Setup
 To run this code, you need the following dependencies:
@@ -50,3 +50,4 @@ python read_top_m_error.py
 ```
 
 the results will be reported in `./handisTable_valid.xlsx`
+
