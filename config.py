@@ -5,7 +5,7 @@ import os
 confInfo = {
 'BPP': {
     'name':'BPP',
-    'trainDir':r'data/BPP/nItem20_s500/train',
+    'trainDir':r'data/BPP/train',
     'testDir':r'',
     'nGroup':32,
     'reorder':reorderBP,

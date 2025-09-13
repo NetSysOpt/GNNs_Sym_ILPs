@@ -92,8 +92,8 @@ def genSMS(filepath):
 
 if __name__ == '__main__':
 
-    DATADIR = r'./steel'
-    SAVEDIR = r'./SMSP'
+    DATADIR = r'./data/steel'
+    SAVEDIR = r'./data/SMSP'
     os.makedirs(SAVEDIR,exist_ok=True)
 
     filenames = os.listdir(DATADIR)
@@ -103,7 +103,9 @@ if __name__ == '__main__':
         filepath = os.path.join(DATADIR,filename)
         fileId = int(re.findall('\d+',filename)[1])
         trainOrTest = 'train' if fileId<16 else 'test'
-        saveDir = os.path.join(SAVEDIR,trainOrTest,'ins')
+        if trainOrTest == 'test':
+            continue
+        saveDir = os.path.join(SAVEDIR,trainOrTest,'instances')
         os.makedirs(saveDir,exist_ok=True)
         savepath = os.path.join(saveDir,filename+'.mps')
         m = genSMS(filepath)

@@ -13,7 +13,7 @@ To run this code, you need the following dependencies:
 
 ## Data preparation
 
-Follow instructions [here](./data/README.md) to prepare the data.
+Follow instructions [here](./DATA.md) to prepare the data.
 
 ## Training the Model
 
@@ -22,7 +22,7 @@ To train the model, you can use the following bash commands:
 ```bash
 epoch=100
 sampleTimes=8
-for dataset in BIP BBP SMSP
+for dataset in BIP BPP SMSP
 do
     python train.py --Aug empty --dataset $dataset  --epoch $epoch --sampleTimes $sampleTimes
     python train.py --Aug uniform --dataset $dataset  --epoch $epoch --sampleTimes $sampleTimes
@@ -50,4 +50,3 @@ python read_top_m_error.py
 ```
 
 the results will be reported in `./handisTable_valid.xlsx`
-

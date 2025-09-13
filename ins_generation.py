@@ -42,7 +42,7 @@ def gen_bin_packing_ins(capacity=100,largeRatio=0.3,largeLB=0.8,largeUB=1.0,smal
 
 if __name__ == '__main__':
 
-    insDir = './BPP/train/instances'
+    insDir = './data/BPP/train/instances'
     nIns = 500
     os.makedirs(insDir,exist_ok=True)
     for i in range(nIns):

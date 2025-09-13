@@ -18,20 +18,6 @@ def PFs(featureD,J):
     allPEs[oddInds, :] = np.cos(posM[oddInds, :] / 1000 ** (2 * dimM[oddInds, :] / featureD))
 
     return allPEs
-# def getAllPEs(maxN,featureD):
-#
-#     pos = np.arange(1,maxN+1)
-#
-#     posM = pos[:,np.newaxis].repeat(featureD,axis=1)
-#
-#     dimInd = np.arange(1,featureD+1)
-#     dimM = dimInd[np.newaxis,:].repeat(maxN,axis=0)
-#     # even
-#     allPEs = np.zeros((maxN,featureD))
-#     allPEs[0::2,:] = np.sin(posM[0::2,:] / 20 ** (2*dimM[0::2,:]/featureD) )
-#     allPEs[1::2, :] = np.cos(posM[1::2, :] / 20 ** (2 * dimM[1::2, :] / featureD))
-#
-#     return allPEs
 
 
 
