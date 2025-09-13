@@ -38,6 +38,6 @@ for dataset in datasets:
 handisTable = pandas.DataFrame(handisData, columns=["Dataset", "Method", "Top-10%", "Top-20%", "Top-30%", "Top-40%", "Top-50%", "Top-60%", "Top-70%", "Top-80%", "Top-90%", "Top-100%"])
 
 
-handisTable.to_excel(os.path.join(rootDir,'handisTable_valid.xlsx'))
+handisTable.to_excel('handisTable_valid.xlsx')
 
 print('done')
