@@ -18,6 +18,7 @@ The instances (.mps or .lp files) of each dataset should be prepared and placed 
     ```plaintext
     python ins_generation.py
     ```
+  *Note: A random seed setting is currently missing; one may add it to address this omission.*
 
 - For SMSP dataset, please convert instances from the [steelmillslab set](http://becool.info.ucl.ac.be/steelmillslab) into `.mps` format by running
     
@@ -42,5 +43,5 @@ python collect_sols.py --rootDir ./data/SMSP/train --nWorkers 5 --maxTime 3600
 
 ```
 
-*Note: this step may take a couple of days.*
+*Note: The solution files for the BIP and SMSP datasets are available in their respective directories. Running this step from scratch can take multiple days.*
 

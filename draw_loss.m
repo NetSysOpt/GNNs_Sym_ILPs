@@ -21,7 +21,7 @@ loss_scale = 100; % normalize
 dataset_name = 'BPP';
 nexttile;
 drawFigure('valid','Valid loss',gaussian,pos,orbit,group,markerInds,xticks,sw, dataset_name, loss_scale);
-ylim([0.19, 0.4]);
+ylim([0.4, 0.8]);
 
 %%BIP
 dataset='BIP';
@@ -30,7 +30,7 @@ pos = load(sprintf(pathTemp,dataset,'pos',sampleTimes));
 orbit = load(sprintf(pathTemp,dataset,'orbit',sampleTimes));
 group = load(sprintf(pathTemp,dataset,'group',sampleTimes));
 
-loss_scale = 1000; % normalize 
+loss_scale = 1000; % normalize
 dataset_name = 'BIP';
 nexttile;
 drawFigure('valid','Valid loss',gaussian,pos,orbit,group,markerInds,xticks,sw, dataset_name,loss_scale);
@@ -45,10 +45,10 @@ orbit = load(sprintf(pathTemp,dataset,'orbit',sampleTimes));
 group = load(sprintf(pathTemp,dataset,'group',sampleTimes));
 
 dataset_name = 'SMSP';
-loss_scale = 1000; % normalize 
+loss_scale = 1000; % normalize
 nexttile;
 drawFigure('valid','Valid loss',gaussian,pos,orbit,group,markerInds,xticks,sw, dataset_name, loss_scale);
-ylim([0.55,1]);
+ylim([0.4,1]);
 
 
 leg = legend('Uniform','Position ','Orbit','Orbit+','Color',[0.99,0.995,1]);

@@ -42,6 +42,9 @@ def collect(filepath,saveRoot,nSol,maxTime):
 
 
     # collect solutions
+    filename = os.path.join(saveRoot, 'solutions', f'{insName}.sol')
+    if os.path.exists(filename): # skip if there already exists
+        return
     m = scip.Model()
     m.hideOutput()
     m.setLogfile(os.path.join(saveRoot, 'logs', insName + '.log'))
@@ -65,7 +68,7 @@ def collect(filepath,saveRoot,nSol,maxTime):
 
     # get solutions
     sols, objs = getSolObjs(m)
-    filename = os.path.join(saveRoot, 'solutions', f'{insName}.sol')
+
     with gzip.open(filename, "wb") as f:
         pickle.dump({
             'varNames':varNames,
