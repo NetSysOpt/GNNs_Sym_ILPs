@@ -1,7 +1,7 @@
 
 ## Instance Preparation
 
-The structure of datasets are organized under `datasets` as follows
+The structure of datasets are organized under `./data` as follows
 ```plaintext
 ./data/$DATASET_NAME
 ├── train
