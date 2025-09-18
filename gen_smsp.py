@@ -110,6 +110,10 @@ if __name__ == '__main__':
         savepath = os.path.join(saveDir,filename+'.mps')
         m = genSMS(filepath)
         m.writeProblem(savepath)
+
+        # compress
+        os.system(f'gzip {savepath}')
+
         print(f'processed {step+1}/{len(filenames)}')
 
 

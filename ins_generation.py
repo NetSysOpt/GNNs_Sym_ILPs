@@ -48,8 +48,10 @@ if __name__ == '__main__':
     for i in range(nIns):
 
         m = gen_bin_packing_ins(capacity=100,largeRatio=0.3,largeLB=0.8,largeUB=1.0,smallLB=0.1,smallUB=0.3,nItems=20)
-
-        m.writeProblem(os.path.join(insDir,f'bin_packing_{i}.lp'))
-
+        savepath = os.path.join(insDir,f'bin_packing_{i}.lp')
+        m.writeProblem(savepath)
+        # compress
+        os.system(f'gzip {savepath}')
+        print(f'processed {i + 1}/{nIns}')
 
 print('done')

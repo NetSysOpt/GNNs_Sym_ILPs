@@ -49,7 +49,7 @@ augFunc = info['featureAugFuncs'][args.Aug]
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 os.makedirs(exp_dir,exist_ok=True)
 sample_names = os.listdir(DIR_SOL)
-sample_files = [ (os.path.join(DIR_INS,name.replace('.sol','')),os.path.join(DIR_SOL,name)) for name in sample_names]
+sample_files = [ (os.path.join(DIR_INS,name.replace('.sol','').replace('.gz','')),os.path.join(DIR_SOL,name)) for name in sample_names]
 
 
 
@@ -139,10 +139,7 @@ def process(policy, data_loader, optimizer=None):
                 if optimizer is not None:
                     optimizer.step()
                     optimizer.zero_grad()
-                # output
-                # if step%PRT_FREQUENCY==0:
-                #     mod = 'train' if optimizer else 'valid'
-                #     print('Epoch {} {} [{}/{}] loss {:.6f}'.format( epoch, mod, step,len(data_loader),loss.item()))
+
 
             # hanming distance
 

@@ -42,7 +42,8 @@ def collect(filepath,saveRoot,nSol,maxTime):
 
 
     # collect solutions
-    filename = os.path.join(saveRoot, 'solutions', f'{insName}.sol')
+    solName = f'{insName}.sol'
+    filename = os.path.join(saveRoot, 'solutions',solName.replace('.gz',"") )
     if os.path.exists(filename): # skip if there already exists
         return
     m = scip.Model()
