@@ -30,7 +30,7 @@ def collect(filepath,saveRoot,nSol,maxTime):
     # extract MILP graph
     varNames, variableFeatures, constraintFeatures, edgeInds, edgeWeights = extract_features(filepath)
     bpSaveDir = os.path.join(saveRoot, 'bipartites')
-    filename = os.path.join(bpSaveDir, f'{insName}.bp')
+    filename = os.path.join(bpSaveDir, f'{insName}.bp'.replace('.gz',""))
     with gzip.open(filename, "wb") as f:
         pickle.dump({
             'varNames': varNames,

@@ -32,16 +32,22 @@ The instances (.mps or .lp files) of each dataset should be prepared and placed 
 The (high-quality) solutions of training instances are collected and stored in `./data/$DATASET_NAME/train/solutions` using MILP solver SCIP by
 
 
-```plaintext
+```bash
+
+
+# BPP
+python collect_sols.py --rootDir ./data/BPP/train --nWorkers 5 --maxTime 3600
+
 
 # BIP
 python collect_sols.py --rootDir ./data/BIP/train --nWorkers 5 --maxTime 3600
-# BPP
-python collect_sols.py --rootDir ./data/BPP/train --nWorkers 5 --maxTime 3600
+
+
 # SMSP
 python collect_sols.py --rootDir ./data/SMSP/train --nWorkers 5 --maxTime 3600
 
 ```
 
-*Note: The solution files for the BIP and SMSP datasets are available in their respective directories. Running this step from scratch can take multiple days.*
+*Note: The solution files for the BIP and SMSP datasets are already available in their respective directories. Running this step from scratch can take multiple days.*
+
 

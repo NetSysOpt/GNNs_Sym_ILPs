@@ -45,7 +45,7 @@ class MIPDataset(Dataset):
         solpath = self.solPaths[index]
 
         insname = os.path.basename(inspath)
-        bgpath = os.path.join(self.bgdir,insname+'.bp')
+        bgpath = os.path.join(self.bgdir,insname.replace('.gz','')+'.bp')
 
         bpData = pickle.load(gzip.open(bgpath,'rb'))
         if 'sols' not in bpData.keys():
